@@ -1,0 +1,529 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Michroma";
+  font-size: 16px;
+  background-color: white;
+  /* background-color: #E10600; */
+}
+
+/* header starts here */
+
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+  width: 100%;
+  background-color: #fc4c02;
+}
+
+.container {
+  width: 1280px;
+  margin: auto;
+}
+
+.nav_checkbox {
+  display: grid;
+  grid-template-columns: 50px 200px 2fr;
+  grid-template-rows: 60px;
+  align-items: center;
+  padding: 0px 0px;
+}
+
+.logo {
+  text-decoration: none;
+  color: white;
+  padding-left: 0px;
+}
+
+.stravaicon {
+  padding: 0px 0px 0px 0px;
+}
+
+.tab-nav {
+  outline: none;
+  display: none;
+}
+
+.label {
+  display: none;
+  color: white;
+}
+
+.burger {
+  width: 35px;
+  height: 5px;
+  background-color: white;
+  margin-top: 5px;
+}
+
+.content_nav {
+  grid-column: 4;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.content_nav li {
+  display: inline-block;
+  padding-right: 15px;
+}
+
+.content_nav li a {
+  text-decoration: none;
+  color: white;
+  position: relative;
+}
+
+.content_nav li a::after {
+  content: "";
+  display: block;
+  height: 2px;
+  background-color: white;
+  position: absolute;
+  left: 0;
+  right: 0;
+  transform-origin: right;
+  transform: scale(0, 1);
+  transition: transform ease-in-out 0.5s;
+}
+
+.content_nav li a:hover::after {
+  transform: scale(1, 1);
+}
+
+@media screen and (max-width: 1280px) {
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  body {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Michroma";
+    font-size: 12px;
+    background-color: #ffffff;
+  }
+
+  .container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .label {
+    display: grid;
+    cursor: pointer;
+    grid-column: 4;
+    padding-right: 10px;
+  }
+
+  .content_nav {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-column: 1/4;
+    text-align: center;
+    max-height: 0;
+    overflow: hidden;
+    transition: all ease-in-out 0.6s;
+  }
+
+  .nav_checkbox input:checked ~ .content_nav {
+    max-height: 500px;
+  }
+
+  .content_nav li {
+    padding: 10px 0px;
+  }
+}
+
+/* Header ends here */
+
+/* Main Area Layout */
+
+.content_section {
+  width: 100%;
+  background-color: white;
+  margin: auto;
+}
+
+.container2 {
+  width: 100%;
+  /* margin: 0px; */
+  height: 100vh;
+  border: skyblue 1px solid;
+  display: grid;
+  grid-template-areas:
+    "myArea1 myArea2"
+    "myArea3 myArea4"
+    "myArea5 myArea5";
+  grid-template-columns: 0.8fr 0.8fr;
+  grid-template-rows: 220px 185px 100px;
+}
+
+/* All Sections on Main area */
+
+.item {
+  color: #110606;
+  padding: 0px;
+  border: rgb(0, 4, 6) 1px solid;
+  /* display: flex; */
+  /* up and down */
+  /* justify-content: center; */
+  /* left and right */
+  /* align-items: center; */
+}
+
+.header-text {
+  justify-content: center;
+  /* text-align: left; */
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 18px;
+  font-weight: 900;
+}
+
+.main-text {
+  justify-content: center;
+  /* text-align: left; */
+  border: 1px solid #3a921c;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0x;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.small-text {
+  font-size: 12px;
+  font-weight: 200;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+  margin: 0px 0px 0px 0px;
+}
+
+/* Specifically area1 */
+.topleft {
+  grid-area: myArea1;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 90px 0px 0px;
+  text-align: right;
+  /* border: 1px solid #3a921c; */
+}
+
+.headertext {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.topleft-maintext {
+  justify-content: center;
+  /* text-align: right; */
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 20px;
+  margin: 0px 0px 0px 0x;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.stravalogo {
+  padding: 0px 0px 0px 0px;
+  margin: 20px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.topright {
+  grid-area: myArea2;
+  flex-direction: column;
+  justify-content: start;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.topright-maintext {
+  justify-content: center;
+  text-align: left;
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.accuweatherlogo {
+  padding: 0px 0px 0px 0px;
+  margin: 15px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.details-text {
+  font-size: 12px;
+  font-weight: 200;
+  padding: 0px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+  margin: 0px 0px 0px 0px;
+}
+
+.degrees {
+  font-size: 12px;
+  font-weight: 200;
+  vertical-align: text-top;
+  /* border: 1px solid #3a921c; */
+}
+
+.conditions {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  border: 0px solid #3a921c;
+}
+
+.weathericon {
+  border: 0px solid #3a921c;
+  margin: 0px 0px 0px 0px;
+}
+
+.middleleft {
+  grid-area: myArea3;
+  flex-direction: column;
+  text-align: right;
+  justify-content: start;
+  padding: 0px 0px 0px 0px;
+  margin: 0px 90px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.middleleftheadertext {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.middleleft-maintext {
+  justify-content: center;
+  /* text-align: left; */
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 15px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.middleright {
+  grid-area: myArea4;
+  flex-direction: column;
+  justify-content: center;
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+.middlerightheadertext {
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  /* border: 1px solid #3a921c; */
+}
+
+.middleright-maintext {
+  justify-content: center;
+  text-align: left;
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+  font-size: 16px;
+  font-weight: 700;
+}
+
+.selectbox {
+  border: 1px solid #3a921c;
+  padding: 0px 0px 0px 0px;
+  margin: 10px 0px 0px 0px;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.item-5 {
+  grid-area: myArea5;
+  flex-direction: column;
+  text-align: right;
+  justify-content: center;
+  /* border: 1px solid #3a921c; */
+  padding: 0px 0px 0px 0px;
+  margin: 0px 0px 0px 0px;
+}
+
+@media screen and (max-width: 950px) {
+  .content_section {
+    width: 100%;
+    background-color: white;
+  }
+
+  .topleft {
+    grid-area: myArea1;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 40px 0px 0px;
+    /* border: 1px solid #3a921c; */
+    text-align: right;
+  }
+
+  .topright {
+    grid-area: myArea2;
+    flex-direction: column;
+    justify-content: center;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    /* border: 1px solid #3a921c; */
+  }
+
+  .middleleft {
+    grid-area: myArea3;
+    flex-direction: column;
+    justify-content: start;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 40px 0px 0px;
+    /* border: 1px solid #3a921c; */
+  }
+
+  .middleright {
+    grid-area: myArea4;
+    flex-direction: column;
+    justify-content: start;
+    /* border: 1px solid #3a921c; */
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+  }
+
+  .item-5 {
+    grid-area: myArea5;
+    flex-direction: column;
+    justify-content: start;
+    /* border: 1px solid #3a921c; */
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 50px;
+  }
+
+  .accuweatherlogo {
+    padding: 0px 0px 0px 0px;
+    margin: 15px 0px 0px 0px;
+  }
+}
+
+@media screen and (max-width: 640px) {
+  /* hides bottom footer row */
+  .item-5 {
+    display: none;
+    /* border: 1px solid #3a921c; */
+  }
+
+  /* .middleright {
+        display: none;
+        border: 1px solid #3a921c;
+    } */
+
+  .content_section {
+    width: 99%;
+    background-color: white;
+    margin: auto;
+  }
+
+  .container2 {
+    height: 100vh;
+    width: 100%;
+    /* margin: auto; */
+    display: grid;
+    grid-template-rows: 230px 165px 135px;
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "myArea1 myArea1"
+      "myArea3 myArea3"
+      "myArea2 myArea2"
+      "myArea4 myArea4"
+      "myArea5 myArea5";
+  }
+
+  .topleft {
+    grid-area: myArea1;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #73AD21; */
+    padding: 0px 0px 0px 0px;
+    margin: 10px 0px 0px 10px;
+    justify-content: start;
+    text-align: left;
+  }
+
+  .stravalogo {
+    padding: 20px 50px 10px 0px;
+  }
+
+  .topright {
+    grid-area: myArea2;
+    display: flex;
+    flex-direction: column;
+    /* border: 1px solid #73AD21; */
+    margin: 0px 0px 0px 10px;
+    padding: 0px 0px 0px 0px;
+    justify-content: start;
+  }
+
+  .topright-maintext {
+    justify-content: center;
+    text-align: left;
+    /* border: 1px solid #3a921c; */
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 15px;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .accuweatherlogo {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    width: 200px;
+  }
+
+  .weathericon {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 10px;
+  }
+
+  .conditions {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 17px;
+    border: 0px solid #3a921c;
+  }
+
+  .middleleft {
+    grid-area: myArea3;
+    flex-direction: column;
+    text-align: left;
+    justify-content: start;
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 10px;
+    /* border: 1px solid #3a921c; */
+  }
+
+  .middleleftheadertext {
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 0px;
+    /* border: 1px solid #3a921c; */
+  }
+
+  .middleright {
+    grid-area: myArea4;
+    flex-direction: column;
+    justify-content: start;
+    /* border: 1px solid #3a921c; */
+    padding: 0px 0px 0px 0px;
+    margin: 0px 0px 0px 10px;
+  }
+}
